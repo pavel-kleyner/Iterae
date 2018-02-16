@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/nav.css"/>
+<link rel="stylesheet" type="text/css" href="styles/home.css"/>
+<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+</head>
+<body>
+	<div class="nav" id="nav">
+	<a href="#home"><img src="res/logo.png" alt="Iterae Logo" class="logo"></a>
+	<ul>
+		<li><a href="javascript:void(0);" class="menu-icon" onclick="menuIcon()">&#9776;</a></li>
+		<li><a href="#home">Home</a></li>
+		<li><a href="index.html">Practice</a></li>
+		<li><a href="#progress">Progress</a></li>
+		<li><a href="#profile" class="profile-button">Profile</a></li>
+	</ul>
+	<a href="#profile"><img src="res/user_icon.svg" alt="Profile" class="profile-icon"></a>
+	</div>
+
+<div class = "levels-wrapper">
+<button class="accordion" onclick="Accordian()">Beginner</button>
+<div class="panel">
+	<a href = index.html>
+		<h4> Major</h4>
+	</a>
+	<h4>Minor</h4>
+</div>
+<button class="accordion" onclick="Accordian()">Intermediate</button>
+<div class="panel">
+	<h4 class="int_scales">Harmonic Minor</h4>
+	<h4 class="int_scales">Melodic Minor</h4>
+	<h4 class="int_scales">Chromatic</h4>
+	<h4 class="int_scales">Pentatonic</h4>
+</div>
+<button class="accordion"onclick="Accordian()">Expert</button>
+<div class="panel">
+	<h4 class="exp_scales">Ionian</h4>
+	<h4 class="exp_scales">Dorian</h4>
+	<h4 class="exp_scales">Phrygian</h4>
+	<h4 class="exp_scales">Lydian</h4>
+	<h4 class="exp_scales">Mixolydian</h4>
+	<h4 class="exp_scales">Aeolian</h4>
+	<h4 class="exp_scales">Locrian</h4>
+</div>
+
+</div>
+<script src="js/nav.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
