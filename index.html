@@ -9,10 +9,10 @@
 	</head>
 	<body>
 		<div class="nav" id="nav">
-			<a href="#home"><img src="res/logo.png" alt="Iterae Logo" class="logo"></a>
+			<a href="Home.html"><img src="res/logo.png" alt="Iterae Logo" class="logo"></a>
 			<ul>
 				<li><a href="javascript:void(0);" class="menu-icon" onclick="menuIcon()">&#9776;</a></li>
-				<li><a href="#home">Home</a></li>
+				<li><a href="Home.html">Home</a></li>
 				<li><a href="#practice">Practice</a></li>
 				<li><a href="#progress">Progress</a></li>
 				<li><a href="#profile" class="profile-button">Profile</a></li>
@@ -22,12 +22,36 @@
 		
 		<div class="contents-container">
 		  	<div class="scale-header-container">
-		    	<h1 class="scale-header">C Major</h1>
+		    	<h1 class="scale-header">
+		    		<a id = "key-name">C</a>
+		    		<a id = "scale-name">Major</a>
+
+		    	</h1>
 			</div>
 			<div>
 				<img src="res/scales/c_major.png" alt="Scale" class="scale">
 			</div>
 		</div>
+
+
+		<div id = "beginner-scale-container">
+			<button id = "scale1" class = "selected scaleInBar"> Major </button>
+			<a id = "div1" class = "divider"> / </a>
+			<button id = "scale2" class = "other scaleInBar"> Minor </button>
+
+		</div>
+
+		<div id = "intermediate-scale-container">
+			<button id = "scale1" class = "selected scaleInBar"> Harmonic Minor </button>
+			<a id = "div1" class = "divider"> / </a>
+			<button id = "scale2" class = "other scaleInBar"> Melodic Minor </button>
+			<a id = "div2" class = "divider"> / </a>
+			<button id = "scale3" class = "other scaleInBar"> Chromatic </button>
+			<a id = "div3" class = "divider"> / </a>
+			<button id = "scale4" class = "other scaleInBar"> Pentatonic </button>
+
+		</div>
+
 		<div class="metronome-container">
 			<div class="metronome">
 				<div class="metronome-text">
@@ -38,5 +62,39 @@
 		</div>
 		<script src="js/nav.js"></script>
 		<script src="js/practice.js"></script>
+		<script src="js/jquery.js"></script>
+
+
+	<div id = "scale-dropdown" class = "dropdown">
+		<button id = "scale-dropbtn" class = "dropbtn">Scale: </button>
+			<div class="scale-dropdown-content">
+				<button id = "beginner-scale-select">Major/Minor</button>
+    			<button onclick = "switchScales()">Harmonic Minor/Melodic Minor/...</button>
+    			<a>Ionian/Dorian/Phrygian/...</a>
+		</div>
+		</div>
+
+
+	<div id = "key-dropdown" class="dropdown">
+  		<button id = "key-dropbtn" class="dropbtn">Key</button>
+  			<div class="dropdown-content">
+					<a href="#">C</a>
+    			<a href="#">G</a>
+    			<a href="#">D</a>
+					<a href="#">A</a>
+    			<a href="#">E</a>
+    			<a href="#">B</a>
+					<a href="#">F#</a>
+    			<a href="#">C#</a>
+    			<a href="#">A&#9837</a>
+					<a href="#">E&#9837</a>
+    			<a href="#">B&#9837</a>
+    			<a href="#">F</a>
+  			</div>
+	</div>
+
+
+
+
 	</body>
 </html>
