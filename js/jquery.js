@@ -4,13 +4,10 @@
 
 $(document).ready(function(){
 
-
+	//Changes the scale with the scale button
 	$(".scaleInBar").click(function(){
 		if(this.classList.contains('other')){
-			console.log('\n currSelectedScale\n');
-			console.log(currSelScale);
-			console.log("this " + this.id);
-			//console.log(currSelLevel);
+			
 			currSelScale.className = "other";
 			currSelScale.className += " scaleInBar";
 			this.className = "selected";
@@ -26,29 +23,25 @@ $(document).ready(function(){
 			
 			document.getElementById("scale-name").innerHTML = currSelScale.innerHTML;
 		
-
-			//pr();
 		}
 	});
 
+	//Changes the level with the level dropdown
 	$(".level-select-button").click(function(){
 		//check what level the button corresponds to
 		if(this.id == "beginner-scale-select"){
 			var newLevel = document.getElementById('beginner-scale-container');
 			currSelScale = document.getElementsByClassName('beg selected')[0];
 			document.getElementById("scale-name").innerHTML = currSelScale.innerHTML;
-			console.log('\n currSelectedScale\n');
-			console.log(currSelScale);
-
+			
 		}
 		else if(this.id == "intermediate-scale-select"){
 			var newLevel = document.getElementById('intermediate-scale-container');
 			currSelScale = document.getElementsByClassName('int selected')[0];
 			document.getElementById("scale-name").innerHTML = currSelScale.innerHTML;
-			console.log('\n currSelectedScale\n');
-			console.log(currSelScale);
 		}
-		else{
+		//For the purpose of the depth of this prototype, the expert level has not yet been implemented 
+		else {
 			var newLevel = document.getElementById('expert-scale-container');
 			currSelScale = document.getElementById('exp-scale1')[0];
 		}
@@ -64,6 +57,13 @@ $(document).ready(function(){
 		}
 
 	});
+
+	//Changes the key with the key button dropdown
+	$(".key-select-button").click(function(){
+		document.getElementById("key-name").innerHTML = this.innerHTML;
+	});
+
+
 
 });
 
