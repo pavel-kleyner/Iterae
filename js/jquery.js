@@ -7,16 +7,24 @@ $(document).ready(function(){
 
 	$(".scaleInBar").click(function(){
 		if(this.classList.contains('other')){
-			console.log('\n\ntest\n');
+			console.log('\n currSelectedScale\n');
+			console.log(currSelScale);
+			console.log("this " + this.id);
+			//console.log(currSelLevel);
 			currSelScale.className = "other";
 			currSelScale.className += " scaleInBar";
-	
 			this.className = "selected";
 			this.className += " scaleInBar";
+			if(currSelLevel.id.includes("beginner")){
+				this.className += " beg";
+			}
+			else if(currSelLevel.id.includes("intermediate")){
+				this.className += " int";
+			}
 
 			currSelScale = this;
 			
-			document.getElementById("scale-name").innerHTML = this.innerHTML;
+			document.getElementById("scale-name").innerHTML = currSelScale.innerHTML;
 		
 
 			//pr();
@@ -27,16 +35,22 @@ $(document).ready(function(){
 		//check what level the button corresponds to
 		if(this.id == "beginner-scale-select"){
 			var newLevel = document.getElementById('beginner-scale-container');
-			currSelScale = document.getElementById('beg-scale1');
+			currSelScale = document.getElementsByClassName('beg selected')[0];
+			document.getElementById("scale-name").innerHTML = currSelScale.innerHTML;
+			console.log('\n currSelectedScale\n');
+			console.log(currSelScale);
 
 		}
 		else if(this.id == "intermediate-scale-select"){
 			var newLevel = document.getElementById('intermediate-scale-container');
-			currSelScale = document.getElementById('int-scale1');
+			currSelScale = document.getElementsByClassName('int selected')[0];
+			document.getElementById("scale-name").innerHTML = currSelScale.innerHTML;
+			console.log('\n currSelectedScale\n');
+			console.log(currSelScale);
 		}
 		else{
 			var newLevel = document.getElementById('expert-scale-container');
-			currSelScale = document.getElementById('exp-scale1');
+			currSelScale = document.getElementById('exp-scale1')[0];
 		}
 
 		if(newLevel != currSelLevel){
@@ -48,8 +62,6 @@ $(document).ready(function(){
 		
 			currSelLevel = newLevel;
 		}
-
-		console.log(currSelScale);
 
 	});
 

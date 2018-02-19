@@ -6,15 +6,6 @@ function init() {
 	document.getElementById("bpm").value = tempo.toString();
 };
 
-sc1 = document.getElementById('scale1');
-sc2 = document.getElementById('scale2');
-
-
-function pr(){
-	console.log("sc1 " + sc1.className);
-	console.log("sc2 " + sc2.className);
-	console.log('currSelScale ' + currSelScale.id);
-}
 
 init();
 
