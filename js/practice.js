@@ -1,6 +1,6 @@
 var tempo = 90;
 var currSelScale = document.getElementsByClassName("selected")[0];
-
+var currSelLevel = document.getElementsByClassName("selected-level")[0];
 
 function init() {
 	document.getElementById("bpm").value = tempo.toString();
@@ -21,11 +21,12 @@ init();
 function switchScales(){
 		int = document.getElementById("intermediate-scale-container");
 		beg = document.getElementById("beginner-scale-container");
-		int.style.visibility = "visible";
-		beg.style.visibility = "hidden";
+		int.className = "selected-level";
+		beg.className = "other-level";
+		currSelLevel = int;
 		
-		console.log('beg ' + beg.visibility);
-		console.log('int ' + int.visibility);
+		console.log('beg ' + beg.className);
+		console.log('int ' + int.className);
 	};
 
 

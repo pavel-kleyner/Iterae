@@ -6,6 +6,8 @@
         <link rel="stylesheet" type="text/css" href="styles/practice.css"/>
         <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 	</head>
 	<body>
 		<div class="nav" id="nav">
@@ -34,14 +36,14 @@
 		</div>
 
 
-		<div id = "beginner-scale-container">
+		<div class = "selected-level" id = "beginner-scale-container">
 			<button id = "scale1" class = "selected scaleInBar"> Major </button>
 			<a id = "div1" class = "divider"> / </a>
 			<button id = "scale2" class = "other scaleInBar"> Minor </button>
 
 		</div>
 
-		<div id = "intermediate-scale-container">
+		<div class = "other-level" id = "intermediate-scale-container">
 			<button id = "scale1" class = "selected scaleInBar"> Harmonic Minor </button>
 			<a id = "div1" class = "divider"> / </a>
 			<button id = "scale2" class = "other scaleInBar"> Melodic Minor </button>
@@ -66,11 +68,17 @@
 
 
 	<div id = "scale-dropdown" class = "dropdown">
-		<button id = "scale-dropbtn" class = "dropbtn">Scale: </button>
+		<button id = "scale-dropbtn" class = "dropbtn">
+			      <i id = "drop-arrow" class="material-icons">expand_more</i>
+		 </button>
 			<div class="scale-dropdown-content">
-				<button id = "beginner-scale-select">Major/Minor</button>
-    			<button onclick = "switchScales()">Harmonic Minor/Melodic Minor/...</button>
-    			<a>Ionian/Dorian/Phrygian/...</a>
+				<button class = "level-select-button" id = "beginner-scale-select">
+					<a>Major/Minor</a>
+				</button>
+    			<button class = "level-select-button" id = "intermediate-scale-select" onclick = "switchScales()">
+    			<a>Harmonic Minor/Melodic Minor/...</a></button>
+    			<button class = "level-select-button" id = "expert-scale-select">
+    			<a>Ionian/Dorian/Phrygian/...</a></button>
 		</div>
 		</div>
 
