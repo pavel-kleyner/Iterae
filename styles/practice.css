@@ -126,7 +126,7 @@ h2 {
 
 #key-dropbtn{
 	padding: 20px;
-    font-size: 25px;
+    font-size: 47px;
 }
 
 .dropbtn {
@@ -175,9 +175,9 @@ h2 {
 #key-dropdown{
 	position: absolute;
 	top: 100px;
-	left: 350px;
+	left: 25px;
 	width: 60px;
-	height: 20px;
+	height: 55px;
 }
 
 .dropdown {
