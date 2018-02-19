@@ -37,20 +37,31 @@
 
 
 		<div class = "selected-level" id = "beginner-scale-container">
-			<button id = "scale1" class = "selected scaleInBar"> Major </button>
+			<button id = "beg-scale1" class = "selected scaleInBar"> Major </button>
 			<a id = "div1" class = "divider"> / </a>
-			<button id = "scale2" class = "other scaleInBar"> Minor </button>
+			<button id = "beg-scale2" class = "other scaleInBar"> Minor </button>
 
 		</div>
 
 		<div class = "other-level" id = "intermediate-scale-container">
-			<button id = "scale1" class = "selected scaleInBar"> Harmonic Minor </button>
+			<button id = "int-scale1" class = "selected scaleInBar"> Harmonic Minor </button>
 			<a id = "div1" class = "divider"> / </a>
-			<button id = "scale2" class = "other scaleInBar"> Melodic Minor </button>
+			<button id = "int-scale2" class = "other scaleInBar"> Melodic Minor </button>
 			<a id = "div2" class = "divider"> / </a>
-			<button id = "scale3" class = "other scaleInBar"> Chromatic </button>
+			<button id = "int-scale3" class = "other scaleInBar"> Chromatic </button>
 			<a id = "div3" class = "divider"> / </a>
-			<button id = "scale4" class = "other scaleInBar"> Pentatonic </button>
+			<button id = "int-scale4" class = "other scaleInBar"> Pentatonic </button>
+
+		</div>
+
+		<div class = "other-level" id = "expert-scale-container">
+			<button id = "exp-scale1" class = "selected scaleInBar"> Test </button>
+			<a id = "div1" class = "divider"> / </a>
+			<button id = "exp-scale2" class = "other scaleInBar">  Test </button>
+			<a id = "div2" class = "divider"> / </a>
+			<button id = "exp-scale3" class = "other scaleInBar"> Test </button>
+			<a id = "div3" class = "divider"> / </a>
+			<button id = "exp-scale4" class = "other scaleInBar"> Test </button>
 
 		</div>
 
@@ -72,13 +83,13 @@
 			      <i id = "drop-arrow" class="material-icons">expand_more</i>
 		 </button>
 			<div class="scale-dropdown-content">
-				<button class = "level-select-button" id = "beginner-scale-select">
-					<a>Major/Minor</a>
-				</button>
-    			<button class = "level-select-button" id = "intermediate-scale-select" onclick = "switchScales()">
-    			<a>Harmonic Minor/Melodic Minor/...</a></button>
-    			<button class = "level-select-button" id = "expert-scale-select">
-    			<a>Ionian/Dorian/Phrygian/...</a></button>
+				<p><button class = "level-select-button" id = "beginner-scale-select">
+					Major/Minor
+				</button></p>
+    			<p><button class = "level-select-button" id = "intermediate-scale-select">
+    			Harmonic Minor/Melodic Minor/...</button></p>
+    			<p><button class = "level-select-button" id = "expert-scale-select">
+    			Ionian/Dorian/Phrygian/...</button></p>
 		</div>
 		</div>
 

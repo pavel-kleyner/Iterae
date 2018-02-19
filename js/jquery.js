@@ -7,8 +7,7 @@ $(document).ready(function(){
 
 	$(".scaleInBar").click(function(){
 		if(this.classList.contains('other')){
-			console.log('test\n\n');
-			pr();
+			console.log('\n\ntest\n');
 			currSelScale.className = "other";
 			currSelScale.className += " scaleInBar";
 	
@@ -20,10 +19,39 @@ $(document).ready(function(){
 			document.getElementById("scale-name").innerHTML = this.innerHTML;
 		
 
-			pr();
+			//pr();
 		}
+	});
+
+	$(".level-select-button").click(function(){
+		//check what level the button corresponds to
+		if(this.id == "beginner-scale-select"){
+			var newLevel = document.getElementById('beginner-scale-container');
+			currSelScale = document.getElementById('beg-scale1');
+
+		}
+		else if(this.id == "intermediate-scale-select"){
+			var newLevel = document.getElementById('intermediate-scale-container');
+			currSelScale = document.getElementById('int-scale1');
+		}
+		else{
+			var newLevel = document.getElementById('expert-scale-container');
+			currSelScale = document.getElementById('exp-scale1');
+		}
+
+		if(newLevel != currSelLevel){
+			
+			newLevel.style.visibility = "visible";
+			newLevel.className = "selected-level";
+			currSelLevel.className = "other-level";
+			currSelLevel.style.visibility = "hidden";
 		
-});
+			currSelLevel = newLevel;
+		}
+
+		console.log(currSelScale);
+
+	});
 
 });
 
